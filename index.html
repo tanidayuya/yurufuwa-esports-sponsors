@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>協賛のご案内 - ゆるふわeスポーツ・ゲーミング座談会 in 幕張</title>
+<!-- 機密度: 社外共有可（協賛内定者への個別送付用） -->
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --ink: #4a3f5c;
+    --ink-soft: #6b6080;
+    --pink: #f7c6d9;
+    --lavender: #d9ccf2;
+    --mint: #c8ecdc;
+    --cream: #fdf8f2;
+    --white: #ffffff;
+    --accent: #b48ad6;
+    --accent-deep: #8e5fb8;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: "Hiragino Maru Gothic ProN", "Hiragino Sans", "Yu Gothic", -apple-system, sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.8;
+  }
+
+  .todo {
+    background: #fff3a3;
+    border-radius: 4px;
+    padding: 0 6px;
+    font-weight: 700;
+  }
+
+  .section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 72px 32px;
+  }
+  .section-content { max-width: 880px; width: 100%; }
+  .section.alt { background: var(--white); }
+
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--accent-deep);
+    margin-bottom: 18px;
+  }
+  .eyebrow .line { width: 28px; height: 2px; background: currentColor; opacity: 0.4; border-radius: 2px; }
+
+  h2 {
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+    margin-bottom: 16px;
+  }
+  .section-lead { font-size: 15px; color: var(--ink-soft); margin-bottom: 36px; }
+
+  /* ===== Hero ===== */
+  .hero {
+    background: linear-gradient(135deg, var(--pink) 0%, var(--lavender) 55%, var(--mint) 100%);
+    padding: 90px 32px 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero .doc-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: rgba(74,63,92,0.55);
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.35;
+    margin-bottom: 22px;
+  }
+  .hero-sub {
+    font-size: 15px;
+    line-height: 2.0;
+    color: var(--ink-soft);
+    max-width: 620px;
+    margin: 0 auto 36px;
+  }
+  .hero-meta {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .hero-meta span {
+    background: rgba(255,255,255,0.75);
+    border-radius: 999px;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 28px; }
+    h2 { font-size: 26px; }
+    .section { padding: 56px 20px; }
+  }
+
+  /* ===== About cards ===== */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+  .card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 26px 24px;
+    box-shadow: 0 4px 18px rgba(142,95,184,0.08);
+  }
+  .section.alt .card { background: var(--cream); box-shadow: none; border: 1px solid rgba(142,95,184,0.15); }
+  .card h3 { font-size: 16px; font-weight: 800; margin-bottom: 10px; }
+  .card p { font-size: 13.5px; color: var(--ink-soft); }
+  .card .emoji { font-size: 26px; display: block; margin-bottom: 10px; }
+
+  /* ===== Plan ===== */
+  .plan-box {
+    background: var(--white);
+    border: 2px solid var(--accent);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgba(142,95,184,0.12);
+  }
+  .plan-head {
+    background: linear-gradient(120deg, var(--lavender), var(--pink));
+    padding: 26px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .plan-name { font-size: 15px; font-weight: 800; }
+  .plan-price { font-size: 30px; font-weight: 800; }
+  .plan-price small { font-size: 13px; font-weight: 700; }
+  .plan-items { list-style: none; padding: 8px 30px 22px; }
+  .plan-items li {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 16px 0;
+    border-bottom: 1px dashed rgba(142,95,184,0.25);
+  }
+  .plan-items li:last-child { border-bottom: none; }
+  .item-name { font-size: 15px; font-weight: 800; }
+  .item-name::before { content: "🌸 "; }
+  .item-desc { font-size: 13px; color: var(--ink-soft); }
+  .plan-note { margin-top: 18px; font-size: 12px; color: var(--ink-soft); }
+
+  .usage-box {
+    margin-top: 22px;
+    background: var(--cream);
+    border: 1px dashed var(--accent);
+    border-radius: 18px;
+    padding: 22px 26px;
+  }
+  .usage-title { font-size: 14px; font-weight: 800; margin-bottom: 10px; }
+  .usage-items { list-style: none; }
+  .usage-items li {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 13.5px;
+    padding: 7px 0;
+    border-bottom: 1px dotted rgba(142,95,184,0.3);
+  }
+  .usage-items li:last-child { border-bottom: none; }
+  .usage-items li span:last-child { font-weight: 800; white-space: nowrap; }
+
+  /* ===== Timeline ===== */
+  .timeline { display: flex; flex-direction: column; gap: 0; }
+  .tl-item {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 18px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(142,95,184,0.15);
+  }
+  .tl-item:last-child { border-bottom: none; }
+  .tl-time { font-size: 13px; font-weight: 800; color: var(--accent-deep); }
+  .tl-body { font-size: 14px; }
+  .tl-expose {
+    display: inline-block;
+    margin-left: 10px;
+    background: var(--mint);
+    border-radius: 999px;
+    padding: 1px 12px;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  @media (max-width: 560px) { .tl-item { grid-template-columns: 1fr; gap: 4px; } }
+
+  /* ===== Contact ===== */
+  .contact {
+    background: linear-gradient(135deg, var(--mint), var(--lavender));
+    text-align: center;
+  }
+  .contact-box {
+    background: rgba(255,255,255,0.85);
+    border-radius: 20px;
+    display: inline-block;
+    padding: 26px 44px;
+    margin-top: 10px;
+  }
+  .contact-mail { font-size: 20px; font-weight: 800; color: var(--accent-deep); text-decoration: none; }
+
+  .footer { text-align: center; padding: 30px 20px 46px; font-size: 11px; color: var(--ink-soft); }
+
+  @media print {
+    body { background: var(--white); }
+    .section { padding: 42px 32px; }
+    .usage-box, .plan-box, .card, .tl-item, .contact-box { break-inside: avoid; }
+    .hero { padding: 60px 32px 48px; }
+    .todo { background: #fff3a3 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<section class="hero">
+  <p class="doc-label">Sponsorship Guide</p>
+  <h1>ゆるふわeスポーツ・<br>ゲーミング座談会 in 幕張<br>協賛のご案内</h1>
+  <p class="hero-sub">
+    映画館をまるごと貸し切って、ゲーム・eスポーツをゆるく熱く語り合う夜。<br>
+    業界の中の人も、これから関わりたい人も、肩書きを置いて集まる<br>
+    コミュニティ座談会イベントです。
+  </p>
+  <div class="hero-meta">
+    <span>📅 2026年9月18日（金）19:00〜22:00</span>
+    <span>🎬 イオンシネマ・幕張（貸切）</span>
+  </div>
+</section>
+
+<!-- イベント概要 -->
+<section class="section" id="about">
+  <div class="section-content">
+    <p class="eyebrow"><span class="line"></span>About<span class="line"></span></p>
+    <h2>どんなイベント？</h2>
+    <p class="section-lead">プレゼンなし、堅い議論なし。好きなゲームの話から業界のリアルな裏話、eスポーツの未来まで、話したい人が話し、聞きたい人は聞くだけでもOKの「ゆるふわ」な座談会です。2026年4月の新宿回（新宿ロフトプラスワン）に続くシリーズ第2弾として、今回は映画館のスクリーンを舞台に開催します。</p>
+    <div class="cards">
+      <div class="card">
+        <span class="emoji">🎬</span>
+        <h3>映画館を貸切開催</h3>
+        <p>イオンシネマ・幕張のスクリーンを貸し切り。大画面と上質な音響を活かした、他にはない没入感の座談会です。</p>
+      </div>
+      <div class="card">
+        <span class="emoji">🧑‍🤝‍🧑</span>
+        <h3>業界人と業界ファンが交わる</h3>
+        <p>ゲーム／eスポーツ業界で働く人、参入を目指す人、イベント・配信・コミュニティ運営者、そして純粋なゲーム好きが一堂に会します。</p>
+      </div>
+      <div class="card">
+        <span class="emoji">💬</span>
+        <h3>「ゆるさ」が生む本音の交流</h3>
+        <p>登壇者と客席の垣根が低いのがこの座談会の持ち味。休憩・終了後のフリー交流でも自然なつながりが生まれます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 協賛プラン -->
+<section class="section alt" id="plan">
+  <div class="section-content">
+    <p class="eyebrow"><span class="line"></span>Sponsorship Plan<span class="line"></span></p>
+    <h2>協賛プラン</h2>
+    <p class="section-lead">ご協賛金は、映画館貸切の会場費をはじめとする開催実費に充当させていただきます。一口10万円で、何口でもお申し込みいただけます。ゲーム・eスポーツコミュニティへの温かいご支援に、当日の露出とレポートでお応えします。</p>
+
+    <div class="plan-box">
+      <div class="plan-head">
+        <p class="plan-name">スポンサープラン（一口・複数口も歓迎）</p>
+        <p class="plan-price">¥100,000<small>／口（税別）</small></p>
+      </div>
+      <ul class="plan-items">
+        <li>
+          <span class="item-name">シネマスクリーンでのロゴ上映</span>
+          <span class="item-desc">開場中・休憩中に、映画館の大スクリーンへ協賛社ロゴ・スライドを上映します。CM素材（動画）の上映もご相談いただけます。</span>
+        </li>
+        <li>
+          <span class="item-name">ご挨拶・スピーチ枠</span>
+          <span class="item-desc">イベント当日、全参加者の前で貴社（貴殿）のご紹介スピーチ（約2〜3分）。全員着席のシアター環境で、確実に耳を傾けてもらえます。</span>
+        </li>
+        <li>
+          <span class="item-name">告知ページ・SNSでのお名前掲載</span>
+          <span class="item-desc">Peatix告知ページ・SNS告知投稿・当日の投影スライドに、協賛社としてロゴ／お名前を掲載します。</span>
+        </li>
+        <li>
+          <span class="item-name">制作物・ノベルティの配布</span>
+          <span class="item-desc">受付にて、チラシ・ノベルティ等を全参加者へ配布できます。</span>
+        </li>
+        <li>
+          <span class="item-name">開催後レポートの共有</span>
+          <span class="item-desc">参加者数・属性・当日の様子（写真）をまとめた開催レポートをお送りします。</span>
+        </li>
+      </ul>
+    </div>
+    <div class="usage-box">
+      <p class="usage-title">🎯 目標金額と使いみち（合計 約80万円）</p>
+      <ul class="usage-items">
+        <li><span>映画館貸切の会場費</span><span>約60万円</span></li>
+        <li><span>ゲストの交通費 ほか</span><span>約10万円</span></li>
+        <li><span>ケータリング（おにぎり・どら焼きなど）</span><span>約10万円</span></li>
+      </ul>
+    </div>
+    <p class="plan-note">※ ご請求書は運営パートナーのGLOE株式会社より発行いたします。<br>※ 内容・方法は会場（映画館）の規定および運営上の都合により、合理的な範囲で調整させていただく場合があります。<br>※ 個人でのご協賛も同内容にて承ります（お名前掲載の表記はご希望に沿って調整します）。</p>
+  </div>
+</section>
+
+<!-- 当日の露出ポイント -->
+<section class="section" id="exposure">
+  <div class="section-content">
+    <p class="eyebrow"><span class="line"></span>Exposure Timeline<span class="line"></span></p>
+    <h2>当日の露出ポイント</h2>
+    <p class="section-lead">開場から終演まで、映画館ならではの露出機会をご用意しています。</p>
+    <div class="timeline">
+      <div class="tl-item">
+        <p class="tl-time">事前告知</p>
+        <p class="tl-body">Peatix告知ページ・SNS投稿に<strong>ロゴ／お名前掲載</strong><span class="tl-expose">LOGO</span></p>
+      </div>
+      <div class="tl-item">
+        <p class="tl-time">開場（18:30〜）</p>
+        <p class="tl-body">スクリーンに<strong>協賛社ロゴ・CMをループ上映</strong>、受付で配布物をお渡し<span class="tl-expose">スクリーン</span></p>
+      </div>
+      <div class="tl-item">
+        <p class="tl-time">オープニング</p>
+        <p class="tl-body">主催から<strong>協賛社のご紹介</strong>（スクリーン投影つき）<span class="tl-expose">紹介</span></p>
+      </div>
+      <div class="tl-item">
+        <p class="tl-time">休憩タイム</p>
+        <p class="tl-body">全員着席の状態で<strong>スポンサースピーチ（約2〜3分）</strong>・ロゴ上映<span class="tl-expose">スピーチ</span></p>
+      </div>
+      <div class="tl-item">
+        <p class="tl-time">クロージング</p>
+        <p class="tl-body">エンドロールとして<strong>協賛社一覧をスクリーン上映</strong><span class="tl-expose">スクリーン</span></p>
+      </div>
+      <div class="tl-item">
+        <p class="tl-time">開催後</p>
+        <p class="tl-body"><strong>開催レポート・写真を共有</strong>、御礼のSNS投稿でも協賛社をご紹介<span class="tl-expose">レポート</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 運営 -->
+<section class="section alt" id="operation">
+  <div class="section-content">
+    <p class="eyebrow"><span class="line"></span>Operation<span class="line"></span></p>
+    <h2>安心してご協賛いただくために</h2>
+    <div class="cards">
+      <div class="card">
+        <span class="emoji">💰</span>
+        <h3>協賛金の使途</h3>
+        <p>ご協賛金は会場費・ゲスト交通費・ケータリングなど、本イベントの開催実費に全額充当します。営利目的の興行ではなく、コミュニティ交流を目的としたイベントです。</p>
+      </div>
+      <div class="card">
+        <span class="emoji">🏢</span>
+        <h3>運営体制</h3>
+        <p>主催は谷田優也（GLOE株式会社 共同代表）による個人主催のコミュニティイベントです。ご請求書の発行などの事務はGLOE株式会社が担い、受付・進行・記録まで運営が実施します。</p>
+      </div>
+      <div class="card">
+        <span class="emoji">📷</span>
+        <h3>記録と共有</h3>
+        <p>当日の様子は写真撮影し、開催後レポートとしてご協賛の皆さまへ共有します（写り込みNGの参加者には配慮のうえ運用します）。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- お問い合わせ -->
+<section class="section contact" id="contact">
+  <div class="section-content">
+    <p class="eyebrow" style="justify-content:center;"><span class="line"></span>Contact<span class="line"></span></p>
+    <h2>お問い合わせ</h2>
+    <p class="section-lead">ご協賛内容の調整・ご不明点など、お気軽にご連絡ください。</p>
+    <div class="contact-box">
+      <a class="contact-mail" href="mailto:yuya_tanida@gloe.jp">yuya_tanida@gloe.jp</a>
+      <p style="margin-top:14px; font-size:12px; color:var(--ink-soft);">ゆるふわeスポーツ・ゲーミング座談会 運営（担当: 谷田）</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>本資料の内容は運営上の都合により変更となる場合があります。<br>&copy; 2026 ゆるふわeスポーツ・ゲーミング座談会</p>
+</footer>
+
+</body>
+</html>
